@@ -173,10 +173,9 @@ Shows a random image from a list of images in a html file and auto shows and hid
 Use ```!randomimage``` to show the image and ```!hideimage``` to hide the image if you have not set a hide timer
 
 ## Initial setup:
-- create a folder in your Sammi folder called "KBMrandomimage"
-- create a file in the folder called "randomimage.html"
-- put all the images you want to use in the folder
-- create a txt file and name it "listofimages.txt" with within it all the names of the files you want the script to use, one line for one file. for example:
+- load the deck into Sammi from the json file as described above and restart Sammi to allow it to create the necessary files
+- put all the images you want to use in the folder called "kbmrandomimage" in your Sammi folder
+- open the file "listofimages.txt" in the "kbmrandomimage" folder, delete the line marked as "delete this line" and add all the names of the files you want the script to use, one line for one file. for example:
 ```
 picture1.jpg
 picture2.png
