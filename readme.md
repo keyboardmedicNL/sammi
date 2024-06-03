@@ -166,3 +166,41 @@ it can do 2 formats of time notation
 to convert use "!convert time timezone_to_convert_from timezone_to_convert_to"
 
 ```!convert 15:00pm est utc```
+
+# KBM randomimage usage guide:
+Shows a random image from a list of images in a html file and auto shows and hides an obs source to provide a smooth transition.
+
+Use ```!randomimage``` to show the image and ```!hideimage``` to hide the image if you have not set a hide timer
+
+## Initial setup:
+- create a folder in your Sammi folder called "KBMrandomimage"
+- create a file in the folder called "randomimage.html"
+- put all the images you want to use in the folder
+- create a txt file and name it "listofimages.txt" with within it all the names of the files you want the script to use, one line for one file. for example:
+```
+picture1.jpg
+picture2.png
+picture3.jpg
+```
+- create a new scene in OBS and name it "kbmrandomimage"
+- create a new browser source in the scene you just created and name it "kbmrandomimagesource" and point it at the local html file you created earlier called "randomimage.html". Make sure to tick refresh source when it becomes visible
+- nest this scene in the scene you want to display it to use it in exsisting scenes
+
+## changing the time the image is visible:
+To change the time the image is visible on screen use the command "!rihidetime time in seconds"
+
+```!rihidetime 20```
+
+## changing the cooldown for the !randomimage command:
+To change the cooldown for the !randomimage command use the command "!ricooldown time in seconds"
+
+```!ricooldown 60```
+
+## changing the activation from a command to a channel point redeem:
+To change the activation method from a command to a channel point redeem:
+- open the deck in Sammi by double clicking the deck named "KBM random image"
+- with the deck open right click on !randomimage and select "Edit triggers"
+- set both Twitch chat message options to broadcaster with the tickbox marked broadcaster
+- click the plus below the exsisiting triggers and select "Twitch channel point redemption"
+- Select your channel point redeem in the dropdown menu (might have to hit "Load from twitch api").
+- Save and test your redeem.
