@@ -173,6 +173,7 @@ Shows a random image from a list of images in a html file and auto shows and hid
 Use ```!randomimage``` to show the image and ```!hideimage``` to hide the image if you have not set a hide timer
 
 ## Initial setup:
+- make sure sammi is connected to obs trough the websocket (check Sammi documentation on how to do this)
 - load the deck into Sammi from the json file as described above and restart Sammi to allow it to create the necessary files
 - put all the images you want to use in the folder called "kbmrandomimage" in your Sammi folder
 - open the file "listofimages.txt" in the "kbmrandomimage" folder, delete the line marked as "delete this line" and add all the names of the files you want the script to use, one line for one file. for example:
@@ -183,6 +184,18 @@ picture3.jpg
 ```
 - create a new scene in OBS and name it "kbmrandomimage"
 - create a new browser source in the scene you just created and name it "kbmrandomimagesource" and point it at the local html file you created earlier called "randomimage.html". Make sure to tick refresh source when it becomes visible
+- if you want the image to be centered on screen add the following css code to the "costum css" section in the browser source options
+```
+body {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  display: flex;
+  margin: auto;
+}
+```
 - nest this scene in the scene you want to display it to use it in exsisting scenes
 
 ## changing the time the image is visible:
